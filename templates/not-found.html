@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Database Lookup Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+      <a class="navbar-brand"><img src="../static/kocher-lab-green-70px.png" width="100"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../gene/{{ Gene_ID }}">Gene</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../orthologs-lookup/{{ Gene_ID }}">Orthologs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../mrna-lookup/{{ Gene_ID }}">mRNA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../protein-lookup/{{ Gene_ID }}">Protein</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <h4>Error</h4>
+    <h6><b>{{ Gene_ID }}:</b> Unable to find {{ data_type }}.</h6>
+   	 	
+  </body>
+</html>
